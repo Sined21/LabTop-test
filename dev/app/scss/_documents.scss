@@ -1,0 +1,117 @@
+/* documents */
+.documents {
+	position: relative;
+	color: $white;
+	
+	@include media('>=md') {
+		margin-top: -10.8rem;
+	}
+
+	@include media('<xl') {
+		background-color: $colorPrimary;
+	}
+	
+	&__inner {
+		position: relative;
+		padding-top: 19.5rem;
+		
+		@include media('>=md') {
+			padding-top: 7rem;
+		}
+
+		@include media('>=xl') {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 100vw;
+				background-color: inherit;
+				background-color: $colorPrimary;
+			}
+		}
+	}
+
+	&__content {
+		@include media('<md') {
+			max-width: 20rem;
+			padding-bottom: 6.5rem;
+		}
+		
+		@include media('>=md') {
+			position: relative;
+			width: 50%;
+			padding-right: 5rem;
+			padding-bottom: 9rem;
+		}
+		
+		@include media('>=xl') {
+			display: flex;
+		}
+	}
+
+	&__title {
+		margin-right: 9.5rem;
+		margin-bottom: 4.8rem;
+		font-weight: $extraBold;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: 0;
+
+		@include media('>=md') {
+			font-size: 2.4rem;
+			line-height: 1.41666666667;
+		}
+
+		@include media('>=xl') {
+			margin-top: 4.5rem;
+		}
+	}
+
+	&__decor {
+		pointer-events: none;
+		position: absolute;
+		top: 20rem;
+		left: -3rem;
+		width: 19.6rem;
+		
+		@include media('>=md') {
+			top: 0.8rem;
+			left: 0;
+			width: 23.8rem;
+		}
+	}
+
+	&__control {
+		position: relative;
+		bottom: -3.7rem;
+		width: 50%;
+		text-align: center;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		z-index: 2;
+		transform: translate(-50%, -50%);
+	}
+
+	&__visual {
+		pointer-events: none;
+		position: absolute;
+		width: 46.4rem;
+		top: -4rem;
+		right: -20rem;
+		margin: 0;
+		
+		@include media('>=md') {
+			width: 58%;
+			top: -7.3rem;
+			right: -1.7rem;
+		}
+	}
+}

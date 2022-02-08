@@ -1,0 +1,52 @@
+// vars
+$images: '../images/';
+$fonts: '../fonts/';
+
+// typography
+$proximaNova: 'Proxima Nova', sans-serif;
+
+$thin: 100 !default;
+$light: 300 !default;
+$regular: 400 !default;
+$medium: 500 !default;
+$bold: 700 !default;
+$extraBold: 800 !default;
+$ultraBold: 900 !default;
+
+// breakpoints
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+// colors
+$white: #fff;
+$black: #000;
+
+$colorPrimary: #1F65D9;
+$colorSecondary: #233148;
+$colorThird: #EAEFF5;
+$colorAccent: #FCCF18;
+
+$text: #8796AE;
+
+// base vars
+$body-color: $colorSecondary;
+$body-bg: $colorThird;
+$font-family-base: $proximaNova;
+$font-size-base: 1.8rem;
+$line-height-base: 1.56;
+$font-weight-base: $regular;
+$letter-spacing-base: 0.02em;
+$links-color-base: inherit;
+$headings-font-weight: $bold;
+
+$transition: all .3s ease;
+
+// dev2
+// dev3
+// dev4

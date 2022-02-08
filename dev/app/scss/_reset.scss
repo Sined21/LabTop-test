@@ -1,0 +1,92 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: $body-bg;
+	color: $body-color;
+	font: $font-weight-base #{$font-size-base}/$line-height-base $font-family-base;
+	letter-spacing: $letter-spacing-base;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	flex-direction: column;
+
+	@include media('<md') {
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
+}
+
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $links-color-base;
+	transition: $transition;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p, ol, ul {
+	margin: 0 0 2rem;
+}
+
+button,
+input[type="search"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: $transition;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+#main {
+	flex-grow: 1;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		margin: 0 0 0.5em;
+		font-weight: $headings-font-weight;
+
+		a {
+			&,
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+}
+
+// dev2
+// dev3
+// dev4

@@ -1,0 +1,44 @@
+/* buttons */
+.btn {
+	cursor: pointer;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $font-family-base;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	transition: $transition;
+
+	&--md {
+		padding: 1.4rem 8.8rem;
+		
+		@include media('>=md') {
+			padding: 2.2rem 12.5rem;
+		}
+	}
+
+	&--accent {
+		border: .5rem solid transparent;
+		background-color: $colorAccent;
+		color: $colorSecondary;
+		font-weight: $bold;
+		font-size: 1.6rem;
+		letter-spacing: 0.02em;
+		transition-delay: 1s;
+		text-transform: uppercase;
+
+		@include magic-border(.5rem, $colorAccent, 0.3s, 0);
+		
+		@include media('>=md') {
+			font-size: 2.2rem;
+		}
+
+		&:hover {
+			background-color: rgba($colorAccent, .5);
+			text-decoration: none;
+			transition-delay: 0s;
+		}
+	}
+}

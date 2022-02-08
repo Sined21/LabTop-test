@@ -1,0 +1,91 @@
+/* service */
+.service {
+	position: relative;
+	background-color: $colorSecondary;
+	color: $white;
+
+	&__decor {
+		pointer-events: none;
+		position: absolute;
+		top: 14rem;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 58.5rem;
+
+		@include media('>=md') {
+			top: 18rem;
+		}
+	}
+	
+	&__inner {
+		padding: 9rem 0 3rem;
+
+		@include media('>=md') {
+			padding: 13rem 0 19rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 6rem;
+
+		@include media('>=md') {
+			margin-bottom: 12rem;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		
+		@include media('>=md') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		padding: 0;
+		margin-bottom: 5rem;
+
+		@include media('>=md') {
+			width: 50%;
+			padding: 0 5rem;
+			margin-bottom: 10rem;
+		}
+		
+		@include media('>=lg') {
+			padding: 0 4.5rem 0 10rem;
+		}
+	}
+	
+	&__icon {
+		display: inline-flex;
+		width: 3.6rem;
+		margin-bottom: 3rem;
+		color: $colorPrimary;
+		
+		@include media('>=md') {
+			width: 5.2rem;
+		}
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 3.5rem;
+
+		@include media('>=md') {
+			margin-bottom: 5rem;
+		}
+	}
+
+	&__text {
+		margin-bottom: 0;
+		font-weight: $light;
+		color: $text;
+	}
+}
